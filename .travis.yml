@@ -1,5 +1,7 @@
 --- 
-language: ruby
+language: node_js
+node_js:
+  - "0.10"
 env: 
   global: 
     - GIT_COMMITTER_NAME=t32k
