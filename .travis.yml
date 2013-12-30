@@ -1,3 +1,4 @@
+language: ruby
 env:
   global:
     - GIT_COMMITTER_NAME=t32k
@@ -6,8 +7,7 @@ env:
     - GIT_AUTHOR_EMAIL=ijok.ijok@gmail.com
     - secure: "pyn9KNVlYOE+1elrfBb8VQ9QkDepr+ytD0SAuIOMiKSotfs1XmvkfgrswS+/BndvV3/LEPkkJyKwrp2yqo9GY6bzVSkkQOPvge0O/svKqhkHMiRpzDze9yct8iAeRyOsGr4Qs8VVq6weTRPOtha2sMDhjgdkVSgE4/spwqV8iHk="
 before_script:
-  - git clone --quiet git@github.com:t32k/static.git
+  - git clone --quiet https://github.com/t32k/static.git
   - git checkout -b gh-pages
   - git rebase master
-  - git push origin gh-pages
-  - git checkout master
+	- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null'
