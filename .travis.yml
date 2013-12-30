@@ -1,7 +1,8 @@
 --- 
 language: node_js
-node_js:
-  - "0.10"
+node_js: 0.10
+notifications:
+  email: false
 env: 
   global: 
     - GIT_COMMITTER_NAME=t32k
