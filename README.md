@@ -1,1 +1,1 @@
-static files.
+Hosted static images. 
