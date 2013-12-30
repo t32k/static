@@ -1,13 +1,14 @@
+--- 
 language: ruby
-env:
-  global:
+env: 
+  global: 
     - GIT_COMMITTER_NAME=t32k
     - GIT_COMMITTER_EMAIL=ijok.ijok@gmail.com
     - GIT_AUTHOR_NAME=t32k
     - GIT_AUTHOR_EMAIL=ijok.ijok@gmail.com
-    - secure: "pyn9KNVlYOE+1elrfBb8VQ9QkDepr+ytD0SAuIOMiKSotfs1XmvkfgrswS+/BndvV3/LEPkkJyKwrp2yqo9GY6bzVSkkQOPvge0O/svKqhkHMiRpzDze9yct8iAeRyOsGr4Qs8VVq6weTRPOtha2sMDhjgdkVSgE4/spwqV8iHk="
-before_script:
-  - git clone --quiet https://github.com/t32k/static.git
-  - git checkout -b gh-pages
-  - git rebase master
-	- '[ "$TRAVIS_BRANCH" == "master" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null'
+    - secure: pyn9KNVlYOE+1elrfBb8VQ9QkDepr+ytD0SAuIOMiKSotfs1XmvkfgrswS+/BndvV3/LEPkkJyKwrp2yqo9GY6bzVSkkQOPvge0O/svKqhkHMiRpzDze9yct8iAeRyOsGr4Qs8VVq6weTRPOtha2sMDhjgdkVSgE4/spwqV8iHk=
+before_script: 
+  - "git clone --quiet https://github.com/t32k/static.git"
+  - "git checkout -b gh-pages"
+  - "git rebase master"
+  - "[ \"$TRAVIS_BRANCH\" == \"master\" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null"
