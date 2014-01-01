@@ -1,5 +1,5 @@
 language: ruby
-node_js: 2.0.0
+rvm: 2.0.0
 notifications:
   email: false
 env: 
