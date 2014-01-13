@@ -1,1 +1,1 @@
-Hosted static images. 
+Hosted static resource.
