@@ -1,1 +1,2 @@
-# Static
+# Static Resources
+
