@@ -1,5 +1,5 @@
 language: ruby
-rvm: 2.0.0
+rvm: 2.1.0
 notifications:
   email: false
 env: 
@@ -14,3 +14,8 @@ script:
   - "git checkout -b gh-pages"
   - "git rebase master"
   - "[ \"$TRAVIS_BRANCH\" == \"master\" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null"
+addons:
+  apt:
+    sources:
+    - deadsnakes
+    - ubuntu-toolchain-r-test
