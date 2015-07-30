@@ -1,7 +1,14 @@
 language: ruby
+<<<<<<< HEAD
 rvm: 2.0.0
 notifications:
   email: false
+=======
+rvm: 2.1.0
+notifications:
+  email: false
+sudo: false
+>>>>>>> master
 env: 
   global: 
     - GIT_AUTHOR_NAME=t32k
@@ -13,4 +20,8 @@ script:
   - "git clone --quiet https://github.com/t32k/static.git"
   - "git checkout -b gh-pages"
   - "git rebase master"
+<<<<<<< HEAD
   - "[ \"$TRAVIS_BRANCH\" == \"master\" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null"
+=======
+  - "[ \"$TRAVIS_BRANCH\" == \"master\" ] && [ $GH_TOKEN ] && git push --quiet https://$GH_TOKEN@github.com/t32k/static.git gh-pages 2> /dev/null"
+>>>>>>> master
