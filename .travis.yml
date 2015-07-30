@@ -1,8 +1,8 @@
-sudo: false
 language: ruby
 rvm: 2.1.0
 notifications:
   email: false
+sudo: false
 env: 
   global: 
     - GIT_AUTHOR_NAME=t32k
